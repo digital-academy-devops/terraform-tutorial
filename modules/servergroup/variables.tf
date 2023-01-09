@@ -16,3 +16,8 @@ variable "group_name" {
   type    = string
   default = "appservers"
 }
+
+variable "image_name" {
+  type  = string
+  default = "ubuntu-2204-lts"
+}

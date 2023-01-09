@@ -32,7 +32,7 @@ resource "yandex_compute_instance" "testvm" {
 }
 
 data "yandex_compute_image" "my_image" {
-  family = "ubuntu-2204-lts"
+  name = "${var.image_name}"
 }
 
 data "yandex_vpc_subnet" "default_zone_subnet" {

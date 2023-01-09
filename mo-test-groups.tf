@@ -3,12 +3,11 @@ locals {
 }
 
 module "mo-server-group" {
-  count = 2
   source = "./modules/servergroup"
 
   zone = local.zone
-  instance_number = 2
-  group_prefix = "mo-${count.index}"
+  instance_number = 1
+  group_prefix = "mo"
   group_name = "appservers"
-
+  image_name = "appserver"
 }
